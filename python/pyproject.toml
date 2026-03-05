@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "unity-mcp"
+version = "0.1.0"
+description = "Model Context Protocol server for Unity Editor"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp",
+    "websockets",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
+
+[project.scripts]
+unity-mcp-server = "unity_mcp.server:main"
